@@ -1,4 +1,4 @@
-from models.mixin.asyncable import Asyncable
+from model.mixin.asyncable import Asyncable
 from mongoengine import *
 from mongoengine.document import Document
 from mongoengine.fields import *

@@ -11,7 +11,7 @@ def route_importer(dest_module: list, father_router: APIRouter):
         module = module[:-3]
         package = importlib.import_module(f"{'.'.join(dest_module)}.{module}")
         logger.debug(f'loaded router: {package}')
-        router = getattr(package, f"{module}_route")
+        router = getattr(package, f"{module}_router")
         father_router.include_router(router)
 
 def route_group_importer(dest_module: list, father_router: APIRouter):

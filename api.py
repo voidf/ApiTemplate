@@ -49,6 +49,11 @@ def preload() -> FastAPI:
         response = await call_next(request)
         response.headers["Access-Control-Allow-Origin"] = request.headers.get('origin', '*')
         return response
+
+    from router import v1_router
+    app.include_router(v1_router)
+
+    
     return app
 
 app = preload()
