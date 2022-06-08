@@ -1,0 +1,9 @@
+~$* 
+*.pyc
+__pycache__/*
+.env
+secret.yml
+ssl/
+log/
+Pipfile
+Pipfile.lock

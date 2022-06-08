@@ -1,0 +1,10 @@
+pyyaml
+# https://stackoverflow.com/questions/24687061/can-i-somehow-share-an-asynchronous-queue-with-a-subprocess
+motor[srv]
+mongoengine
+fastapi
+loguru
+uvicorn
+python-jose
+python-multipart
+content_size_limit_asgi
