@@ -14,7 +14,9 @@ from model import *
 from content_size_limit_asgi import ContentSizeLimitMiddleware, ContentSizeExceeded
 from fastapi.responses import JSONResponse
 from fastapi.exception_handlers import http_exception_handler
-
+from pydantic.json import ENCODERS_BY_TYPE
+from bson.objectid import ObjectId
+ENCODERS_BY_TYPE[ObjectId] = lambda x: str(x) # ObjectID直接转str
 
 
 def preload() -> FastAPI:

@@ -5,7 +5,7 @@ from typing import Optional, TypeVar, Union, get_type_hints
 import datetime
 
 from mongoengine.errors import ValidationError
-from utils.motor import db
+from utility.motor import db
 from pymongo import ReturnDocument
 import motor
 import types

@@ -2,6 +2,9 @@ from loguru import logger
 from config import secret
 import motor.motor_asyncio
 
+from mongoengine import connect
+connect(host=secret.db_auth) # objects方法要用到
+
 client = motor.motor_asyncio.AsyncIOMotorClient(secret.db_auth)
 db = client[secret.db_name]
 
